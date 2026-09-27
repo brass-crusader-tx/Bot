@@ -1,0 +1,12 @@
+name: Cross-repo runner probe
+on:
+  push:
+    branches:
+      - probe/actions-crossrepo-20260927
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo CROSS_REPO_ACTIONS=PASS
+          uname -a
