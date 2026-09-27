@@ -1,0 +1,14 @@
+name: TSUNAMI external executor probe
+on:
+  push:
+    branches:
+      - ci/tsunami-executor-probe-20260927
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          set -eux
+          uname -a
+          java -version
+          echo TSUNAMI_EXTERNAL_EXECUTOR_PROBE=PASS
