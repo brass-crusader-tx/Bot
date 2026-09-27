@@ -1,0 +1,14 @@
+name: TSUNAMI independent runner probe
+on:
+  push:
+    branches:
+      - ci/tsunami-ui-genesis-runner-probe-20260927
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo NONFORK_RUNNER=PASS
+          uname -a
